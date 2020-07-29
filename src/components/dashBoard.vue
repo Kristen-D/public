@@ -1,82 +1,60 @@
 <template>
-  <a-layout id="components-layout-demo-fixed">
-    <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
-      <div class="logo" />
-      <a-menu theme="dark" mode="horizontal" @select="chooseTip" :default-selected-keys="[indexNum]" :style="{ lineHeight: '64px', float: 'left' }">
-        <a-menu-item key="1">首页</a-menu-item>
-        <a-menu-item key="2">试用</a-menu-item>
-        <a-menu-item key="3">联系我们</a-menu-item>
-      </a-menu>
-    </a-layout-header>
-    <a-layout-content :style="{padding: '0px 50px',marginTop: '64px' }">
-      <div :style="{marginTop:'40px',float: 'left'}">💡:请留下您的联系方式，我们将会提供针对您网站的专业评估和咨询服务，为您的网站提供专业监测和护航服务</div>
-      <div :style="{marginTop:'110px'}">
-          <a-form-model :model="form" :label-col="labelCol" :wrapper-col="wrapperCol">
-          <a-form-model-item label="网址" class="input-size">
-            <a-input addon-before="Http://" addon-after=".com" default-value="mysite" />
-          </a-form-model-item>
-            <a-form-model-item label="企业" class="input-size">
-              <a-input v-model="form.name" />
-            </a-form-model-item>
-          <a-form-model-item label="姓名" class="input-size">
-            <a-input v-model="form.desc" />
-          </a-form-model-item>
-          <a-form-model-item label="手机" class="input-size">
-            <a-input v-model="form.desc" />
-          </a-form-model-item>
-          <a-form-model-item label="邮箱" class="input-size">
-            <a-input v-model="form.desc" />
-          </a-form-model-item>
-          <a-form-model-item :wrapper-col="{ span: 22 }">
-            <a-button type="primary" @click="onSubmit" :style="{width: '195px',marginRight: '10px'}">我要咨询</a-button>
-            <a-button style="margin-left: 80px;width: 160px;">我要网站体检报告</a-button>
-          </a-form-model-item>
-        </a-form-model>
-      </div>
-    </a-layout-content>
+  <div :style="{ background: '#fff', padding: '24px', height: '1800px' }">
+    <div>
+      <a-carousel autoplay>
+        <div><h3>一站式网站安全监测服务</h3></div>
+        <div><h3>7X24小时专家服务</h3></div>
+        <div><h3>等保合规、护网重保首选</h3></div>
+      </a-carousel>
+    </div>
+    <div :style="{margin: '50px 0px'}">
+      <a-input-search placeholder="输入：https://aisainfo-sec.com,为您的做最全面的体检" enter-button="体检" size="large" />
+    </div>
 
-  </a-layout>
+    <div :style="{height: '60px', float: 'left'}">
+      <a-spin size="large" /><span>您的网站正在检测中，已经抽检100个页面，还有200个页面未抽检，请您耐心等待……90%</span> <a :style="{marginLeft: '20px',textDecoration: 'underline'}">下载体检结果</a>
+    </div>
+
+    <div :style="{marginTop: '160px'}">
+      <a-row :gutter="[16,16]">
+        <a-col :span="8"><a-card><p>HTTP监测</p><p>DNS监测</p><p>PING监测</p></a-card></a-col>
+        <a-col :span="8"><a-card><p>远程网页篡改监测服务</p><p>网页敏感信息监测服务</p><p>暗链监控</p></a-card></a-col>
+        <a-col :span="8"><a-card><p> Web漏洞扫描检测服务     钓鱼监测</p>
+          <p> 系统漏洞扫描                 木马监测</p><p>数据库漏洞扫描              弱口令检查</p></a-card>
+        </a-col>
+      </a-row>
+      <a-row :gutter="[16,16]">
+        <a-col :span="24"><a-card><p>专家级团队参与运营</p></a-card></a-col>
+      </a-row>
+      <a-row :gutter="[16,16]">
+        <a-col :span="8"><a-card><p>报表定制</p></a-card></a-col>
+        <a-col :span="8"><a-card><p>服务定制</p></a-card></a-col>
+        <a-col :span="8"><a-card><p>安全定制</p></a-card></a-col>
+      </a-row>
+      <a-row :gutter="[16,16]">
+        <a-col :span="24"><a-card><p>击破网站被攻击被勒索枷锁</p></a-card></a-col>
+      </a-row>
+      <a-row :gutter="[16,16]">
+        <a-col :span="8"><a-card><p>网页挂马</p></a-card></a-col>
+        <a-col :span="8"><a-card><p>敏感信息</p></a-card></a-col>
+        <a-col :span="8"><a-card><p>漏洞利用</p></a-card></a-col>
+      </a-row>
+    </div>
+  </div>
 </template>
+
 <script>
-  import hello from "./HelloWorld"
-  import apply from "./applyBoard"
   export default {
-    components:{
-      hello,
-      apply
-    },
-    data() {
+    name: 'HelloWorld',
+    data () {
       return {
-        indexNum: '1',
-        labelCol: { span: 4 },
-        wrapperCol: { span: 14 },
-        form: {
-          name: '',
-          region: undefined,
-          date1: undefined,
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: '',
-        },
+        msg: 'Welcome to Your Vue.js App'
       }
-    },
-    methods: {
-      chooseTip: function(value){
-        this.indexNum = value.key;
-        if (this.indexNum === '1') {
-          this.router.push('./hello')
-        } else if (this.indexNum === '2') {
-          this.$router.push('/hello')
-        }
-      }
-    },
-    mounted() {
-      this.router.push('./hello')
     }
   }
-
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #components-layout-demo-fixed .logo {
     width: 120px;
@@ -97,9 +75,5 @@
 
   .ant-carousel >>> .slick-slide h3 {
     color: #fff;
-  }
-  .input-size {
-    width: 770px;
-    margin:0 auto;
   }
 </style>
