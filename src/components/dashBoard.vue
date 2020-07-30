@@ -22,48 +22,42 @@
           </div>
       </a-row>
       <a-row>
-
+          <div class="desci-show">
+            <a-col :span="8">
+                  <div class="desci-menu1"><img src="/static/images/menu1.png"> <span>可用性监测</span></div>
+                  <div class="desci-menu1-word1"><span>HTTP监测</span></div>
+                  <div class="desci-menu1-word2"><span>DNS监测</span></div>
+                  <div class="desci-menu1-word2"><span>PING监测</span></div>
+            </a-col>
+            <div class="desci-menu1-line"></div>
+            <a-col :span="8" >
+                <div class="desci-menu1"><img src="/static/images/menu2.png"> <span>合规性监测</span></div>
+                <div class="desci-menu1-word1"><span>远程网页篡改监测服务</span></div>
+                <div class="desci-menu1-word2"><span>网页敏感信息监测服务</span></div>
+                <div class="desci-menu1-word2"><span>暗链监控</span></div>
+            </a-col>
+            <div class="desci-menu1-line2"></div>
+            <a-col :span="8">
+              <div class="desci-menu1"><img src="/static/images/menu3.png"> <span>合规性监测</span></div>
+              <div class="desci-menu1-word1"><span>Web漏洞扫描检测服务</span></div>
+              <div class="desci-menu1-word2"><span>钓鱼监测</span></div>
+              <div class="desci-menu1-word2"><span>系统漏洞扫描</span></div>
+              <div class="desci-menu1-word2"><span>木马监测</span></div>
+              <div class="desci-menu1-word2"><span>数据库漏洞扫描</span></div>
+              <div class="desci-menu1-word2"><span>弱口令检查</span></div>
+            </a-col>
+          </div>
+      </a-row>
+      <a-row>
+          <a-col>
+             <div>
+               <img src="/static/images/list1.png" alt="">
+             </div>
+          </a-col>
       </a-row>
 
 
-<!--    <div class="backSelect">-->
-<!--       <div class="backTop"><span>等保合规，护网重保首选</span></div>-->
 
-<!--      <div :style="{margin: '50px 0px'}" >-->
-<!--        <a-input-search placeholder="输入：https://aisainfo-sec.com,为您的做最全面的体检" enter-button="体检" size="large" />-->
-<!--      </div>-->
-
-<!--      <div :style="{height: '60px', float: 'left'}">-->
-<!--        <a-spin size="large" /><span>您的网站正在检测中，已经抽检100个页面，还有200个页面未抽检，请您耐心等待……90%</span> <a :style="{marginLeft: '20px',textDecoration: 'underline'}">下载体检结果</a>-->
-<!--      </div>-->
-<!--    </div>-->
-
-
-<!--    <div :style="{marginTop: '160px'}">-->
-<!--      <a-row :gutter="[16,16]">-->
-<!--        <a-col :span="8"><a-card><p>HTTP监测</p><p>DNS监测</p><p>PING监测</p></a-card></a-col>-->
-<!--        <a-col :span="8"><a-card><p>远程网页篡改监测服务</p><p>网页敏感信息监测服务</p><p>暗链监控</p></a-card></a-col>-->
-<!--        <a-col :span="8"><a-card><p> Web漏洞扫描检测服务     钓鱼监测</p>-->
-<!--          <p> 系统漏洞扫描                 木马监测</p><p>数据库漏洞扫描              弱口令检查</p></a-card>-->
-<!--        </a-col>-->
-<!--      </a-row>-->
-<!--      <a-row :gutter="[16,16]">-->
-<!--        <a-col :span="24"><a-card><p>专家级团队参与运营</p></a-card></a-col>-->
-<!--      </a-row>-->
-<!--      <a-row :gutter="[16,16]">-->
-<!--        <a-col :span="8"><a-card><p>报表定制</p></a-card></a-col>-->
-<!--        <a-col :span="8"><a-card><p>服务定制</p></a-card></a-col>-->
-<!--        <a-col :span="8"><a-card><p>安全定制</p></a-card></a-col>-->
-<!--      </a-row>-->
-<!--      <a-row :gutter="[16,16]">-->
-<!--        <a-col :span="24"><a-card><p>击破网站被攻击被勒索枷锁</p></a-card></a-col>-->
-<!--      </a-row>-->
-<!--      <a-row :gutter="[16,16]">-->
-<!--        <a-col :span="8"><a-card><p>网页挂马</p></a-card></a-col>-->
-<!--        <a-col :span="8"><a-card><p>敏感信息</p></a-card></a-col>-->
-<!--        <a-col :span="8"><a-card><p>漏洞利用</p></a-card></a-col>-->
-<!--      </a-row>-->
-<!--    </div>-->
   </div>
 </template>
 
@@ -135,5 +129,70 @@
     background-color: #5C69D0;
 
   }
+
+  .desci-show {
+    width:1360px;
+    height:465px;
+    background:rgba(251,254,255,1);
+    box-shadow:3px 4px 9px 0px rgba(39,47,108,0.25);
+    opacity:0.9;
+    margin-top: 51px;
+    margin-left: 205px;
+  }
+
+  .desci-menu1 {
+    /*margin-left: 131px;*/
+    margin-top: 56px;
+  }
+  .desci-menu1 span {
+    width:119px;
+    height:25px;
+    font-size:25px;
+    font-family:Microsoft YaHei UI;
+    font-weight:bold;
+    color:rgba(75,83,98,1);
+    line-height:50px;
+  }
+
+  .desci-menu1 img {
+    margin-top: -10px;
+    margin-right: 10px;
+  }
+
+  .desci-menu1-word1 {
+    margin-top: 20px;
+  }
+
+  .desci-menu1-word2 {
+    margin-top: 20px;
+  }
+
+  .desci-menu1-word span{
+    width:80px;
+    height:119px;
+    font-size:19px;
+    font-family:Microsoft YaHei UI;
+    font-weight:400;
+    color:rgba(75,83,98,1);
+    line-height:50px;
+  }
+
+  .desci-menu1-line {
+    width: 1px;
+    height: 310px;
+    background-color: #D4DBE9;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 46px;
+  }
+  .desci-menu1-line2 {
+    width: 1px;
+    height: 310px;
+    background-color: #D4DBE9;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 46px;
+  }
+
 
 </style>
