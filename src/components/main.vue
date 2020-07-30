@@ -12,7 +12,7 @@
         <a-menu-item key="3">联系我们</a-menu-item>
       </a-menu>
     </a-layout-header>
-    <a-layout-content :style="{padding: '0px 50px',marginTop: '64px' }">
+    <a-layout-content>
       <div v-if="this.indexNum === '1'">
         <dash></dash>
       </div>
