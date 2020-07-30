@@ -30,8 +30,18 @@
           <div class="input-top">
             <a-row>
               <a-col :span="22">
-                  <a-input size="large" placeholder="例：输入：https://aisainfo-sec.com,为您的做最全面的体检" class="input-in" />
-                <a-button type="primary" class="input-btn">体检</a-button>
+                  <a-input size="large" placeholder="例：输入：https://aisainfo-sec.com,为您的做最全面的体检" v-model="netUrl" class="input-in" />
+
+                  <a-button type="primary" class="input-btn" @click="checkUrl">体检</a-button>
+                  <div class="checkTip" v-if="isCheck">
+                    <label v-if="isLoad===true">
+                       <a-spin>
+                        <a-icon slot="indicator" type="loading" style="font-size: 24px" spin />
+                      </a-spin>
+                    </label>
+                    <span>{{tip}}</span>
+                    <a v-if="isLoad===false" @click="download">下载体检结果</a>
+                  </div>
               </a-col>
             </a-row>
           </div>
@@ -129,7 +139,47 @@
     name: 'HelloWorld',
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
+        netUrl: '',
+        //tip: '您的网站正在检测中，已经检测35%的页面，还有65%的页面未检测，请您耐心等待.....进度35%',
+        //isCheck: true,
+        //isLoad: true,
+        tip: '',
+        isCheck: false,
+        isLoad: true,
+
+      }
+    },
+    methods: {
+      checkUrl() {
+        let vm = this
+        if (this.netUrl) {
+          vm.isCheck = true;
+          this.tip = '您的网站开始检测.....'
+          setTimeout(function () {
+            vm.tip = '您的网站正在检测中，已经检测35%的页面，还有65%的页面未检测，请您耐心等待.....进度35%'
+          }, 5000);
+          setTimeout(function () {
+            vm.tip = '您的网站正在检测中，已经检测80%的页面，还有20%的页面未检测，请您耐心等待.....进度80%'
+          }, 5000);
+          setTimeout(function () {
+            vm.tip = '您的网站已经检测结束'
+            vm.isLoad = false;
+          }, 6000);
+        }
+      },
+      download() {
+        const h = this.$createElement;
+        this.$info({
+          title: '联系我们',
+          content: h('div', {}, [
+            h('p', '钱先生'),
+            h('p', '电 话:  133-3782-8853'),
+            h('p', '邮 箱:  qian.ke@asiainfo-sec.com'),
+            h('p', '公 司:  亚信科技有限公司'),
+            h('p', '地 址:  南京市雨花区软件大道180号大数据产业园1号楼'),
+          ]),
+          onOk() {},
+        });
       }
     }
   }
@@ -137,6 +187,19 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .checkTip {
+    width:1041px;
+    height:19px;
+    font-size:18px;
+    font-family:Microsoft YaHei UI;
+    font-weight:400;
+    color:rgba(75,83,98,1);
+    line-height:48px;
+    margin-left: 118px;
+  }
+  .checkTip span {
+    margin-right: 146px;
+  }
 
   .position-back {
     position: absolute
