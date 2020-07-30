@@ -31,7 +31,6 @@
             <a-row>
               <a-col :span="22">
                   <a-input size="large" placeholder="例：输入：https://aisainfo-sec.com,为您的做最全面的体检" v-model="netUrl" class="input-in" />
-
                   <a-button type="primary" class="input-btn" @click="checkUrl">体检</a-button>
                   <div class="checkTip" v-if="isCheck">
                     <label v-if="isLoad===true">
@@ -160,11 +159,11 @@
           }, 5000);
           setTimeout(function () {
             vm.tip = '您的网站正在检测中，已经检测80%的页面，还有20%的页面未检测，请您耐心等待.....进度80%'
-          }, 5000);
+          }, 9000);
           setTimeout(function () {
             vm.tip = '您的网站已经检测结束'
             vm.isLoad = false;
-          }, 6000);
+          }, 14000);
         }
       },
       download() {
