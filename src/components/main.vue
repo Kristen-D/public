@@ -16,7 +16,7 @@
       <div v-if="this.indexNum === '1'">
         <dash></dash>
       </div>
-      <div v-else>
+      <div v-if="this.indexNum === '2'">
         <apply></apply>
       </div>
     </a-layout-content>
@@ -26,6 +26,7 @@
 <script>
   import dash from "./dashBoard"
   import apply from "./applyBoard"
+  import { Modal } from 'ant-design-vue';
   export default {
     components:{
       dash,
@@ -34,13 +35,36 @@
     data() {
       return {
         indexNum: '1',
-
+        visible: false,
+        tmpNum: ''
       }
     },
     methods: {
       chooseTip: function(value){
+        this.tmpNum = this.indexNum;
         this.indexNum = value.key;
-      }
+          if (this.indexNum === '3') {
+            this.visible = true;
+            const h = this.$createElement;
+            this.$info({
+              title: '联系我们',
+              content: h('div', {}, [
+                h('p', '钱先生'),
+                h('p', '电 话:  133-3782-8853'),
+                h('p', '邮 箱:  qian.ke@asiainfo-sec.com'),
+                h('p', '公 司:  亚信科技有限公司'),
+                h('p', '地 址:  南京市雨花区软件大道180号大数据产业园1号楼'),
+              ]),
+              onOk() {},
+            });
+          this.indexNum = this.tmpNum;
+        }
+
+      },
+      handleOk(e) {
+        this.visible = false;
+        this.indexNum = this.tmpNum;
+      },
     },
     mounted() {
       //this.router.push('./hello')
