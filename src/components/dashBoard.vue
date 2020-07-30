@@ -53,7 +53,7 @@
             </a-col>
             <div class="desci-menu1-line2"></div>
             <a-col :span="8">
-              <div class="desci-menu1"><img src="/static/images/menu3.png"> <span>合规性监测</span></div>
+              <div class="desci-menu1"><img src="/static/images/menu3.png"> <span>安全性监测</span></div>
               <div class="desci-menu1-word1"><span>Web漏洞扫描检测服务</span></div>
               <div class="desci-menu1-word2"><span>钓鱼监测</span></div>
               <div class="desci-menu1-word2"><span>系统漏洞扫描</span></div>
