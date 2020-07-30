@@ -5,11 +5,11 @@
 <!--      <div>-->
 <!--        -->
 <!--      </div>-->
-      <img src="/static/images/logonew.png" :style="{float: 'left',marginTop: '7px'}">
-      <a-menu theme="dark" mode="horizontal" @select="chooseTip" :default-selected-keys="[indexNum]" :style="{ lineHeight: '64px', float: 'left' }">
-        <a-menu-item key="1">首页</a-menu-item>
-        <a-menu-item key="2">试用</a-menu-item>
-        <a-menu-item key="3">联系我们</a-menu-item>
+      <img src="/static/images/logonew.png" :style="{float: 'left',marginTop: '7px', marginLeft: '285px'}">
+      <a-menu theme="dark" mode="horizontal" @select="chooseTip" :default-selected-keys="[indexNum]" :style="{ lineHeight: '64px', float: 'left', }">
+        <a-menu-item key="1" style="margin-left: 110px;">首页</a-menu-item>
+        <a-menu-item key="2" style="margin-left: 103px;">试用</a-menu-item>
+        <a-menu-item key="3" style="margin-left: 103px;">联系我们</a-menu-item>
       </a-menu>
     </a-layout-header>
     <a-layout-content>
@@ -87,12 +87,29 @@
     background-color: #5C69D0
 
   }
+  .ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+    background-color: #5C69D0;
+
+  }
+
+  li.ant-menu-item {
+    width:35px;
+    font-size:18px;
+    font-family:Microsoft YaHei UI;
+    font-weight:400;
+    color:rgba(235,238,244,1);
+  }
+
   .ant-menu-dark .ant-menu-item:hover {
     background-color: #5C69D0;
     color: #73D1BA;
   }
   .ant-menu-dark .ant-menu-item-selected {
     color: #73D1BA;
+    width:36px;
+    font-size:18px;
+    font-family:Microsoft YaHei UI;
+    font-weight:bold;
   }
 
 

@@ -1,6 +1,11 @@
 <template>
   <div :style="{ background: '#fff', height: '1800px' }">
       <a-row>
+      <div class="backgroun-btm">
+        <img src="/static/images/backgroundmid.png" alt="">
+      </div>
+    </a-row>
+      <a-row>
           <a-col :span="24">
               <div class="position-back">
                   <img src="/static/images/backgroundselect.png" style="width:100%" >
@@ -10,6 +15,16 @@
                   <img src="/static/images/backgroundtop.png">
               </div>
           </a-col>
+      </a-row>
+      <a-row>
+        <div class="backgroun-mid">
+          <img src="/static/images/backgrounbottom.png" alt="">
+        </div>
+      </a-row>
+      <a-row>
+        <div class="page-bottom">
+          <img src="/static/images/bottom.png" alt="">
+        </div>
       </a-row>
       <a-row>
           <div class="input-top">
@@ -49,13 +64,61 @@
           </div>
       </a-row>
       <a-row>
-          <a-col>
-             <div>
-               <img src="/static/images/list1.png" alt="">
-             </div>
+          <a-col :span="24">
+              <div class="desci-list1">
+                 <img src="/static/images/list1.png">
+              </div>
+              <div class="desci-list1-word">
+                 <span>专家级团队参与运营</span>
+              </div>
           </a-col>
       </a-row>
+      <a-row>
+          <div class="desci-word1">
+              <a-col :span="8">
+                <div class="desci-word1-logo"><img src="/static/images/word1-1.png" alt=""></div>
+                <div class="desci-word1-column"><span>报表定制</span></div>
+              </a-col>
+              <a-col :span="8">
+                <div class="desci-word1-logo1"><img src="/static/images/word1-2.png" alt=""></div>
+                <div class="desci-word1-column"><span>服务定制</span></div>
+              </a-col>
+              <div class="desci-menu2-line2"></div>
+              <a-col :span="8">
+                <div class="desci-word1-logo"><img src="/static/images/word1-3.png" alt=""></div>
+                <div class="desci-word1-column"><span>安全定制</span></div>
+              </a-col>
 
+          </div>
+      </a-row>
+      <a-row>
+          <a-col :span="24">
+              <div class="desci-list2">
+                <img src="/static/images/list2.png">
+              </div>
+              <div class="desci-list2-word">
+                <span>击破网站被攻击被勒索枷锁</span>
+              </div>
+          </a-col>
+      </a-row>
+      <a-row>
+          <div class="desci-word2">
+               <a-col :span="8">
+                  <div class="desci-word2-logo"><img src="/static/images/word2-1.png"></div>
+                  <div class="desci-word2-column"><span>网页挂马</span></div>
+               </a-col>
+               <div class="desci-menu2-line1"></div>
+               <a-col :span="8">
+                 <div class="desci-word2-logo"><img src="/static/images/word2-2.png"></div>
+                 <div class="desci-word2-column"><span>敏感信息</span></div>
+               </a-col>
+               <div class="desci-menu2-line2"></div>
+               <a-col :span="8">
+                 <div class="desci-word2-logo"><img src="/static/images/word2-3.png"></div>
+                 <div class="desci-word2-column"><span>漏洞利用</span></div>
+               </a-col>
+          </div>
+      </a-row>
 
 
   </div>
@@ -77,6 +140,23 @@
 
   .position-back {
     position: absolute
+  }
+
+  .backgroun-mid {
+    position: absolute;
+    margin-top: 850px;
+    margin-left: 0px;
+  }
+
+  .backgroun-btm {
+    position: absolute;
+    margin-left: 0px;
+    background-color: #ebeef4;
+  }
+
+  .page-bottom {
+    position: absolute;
+    margin-top: 2378px;
   }
 
   .position-back span {
@@ -194,5 +274,111 @@
     margin-top: 46px;
   }
 
+  .desci-list1 {
+    margin-top: 30px;
+    margin-left: 207px;
+    position: absolute;
+  }
+  .desci-list1-word {
+    margin-top: 100px;
+    margin-left: -635px;
+  }
+  .desci-list1-word span{
+    width:600px;
+    height:36px;
+    font-size:48px;
+    font-family:PangMenZhengDao;
+    font-weight:400;
+    color: rgba(255,255,255,1);
+    line-height:48px;
+    position: absolute;
+  }
 
+  .desci-word1 {
+    background-color: #FBFEFF;
+    height: 330px;
+    margin-top: 140px;
+    width: 1360px;
+    margin-left: 207px;
+    border: 1px solid;
+  }
+  .desci-word1-logo {
+    margin-top: 100px
+  }
+
+  .desci-word1-column {
+    margin-top: 34px;
+  }
+
+  .desci-word1-column span {
+    width:91px;
+    height:24px;
+    font-size:24px;
+    font-family:Microsoft YaHei UI;
+    font-weight:400;
+    color:rgba(75,83,98,1);
+    line-height:50px;
+  }
+  .desci-word1-logo1 {
+    margin-top: 52px
+  }
+
+  .desci-list2 {
+    margin-top: 30px;
+    margin-left: 207px;
+    position: absolute;
+  }
+  .desci-list2-word {
+    margin-top: 100px;
+    margin-left: -635px;
+  }
+  .desci-list2-word span{
+    width:600px;
+    height:36px;
+    font-size:48px;
+    font-family:PangMenZhengDao;
+    font-weight:400;
+    color: rgba(255,255,255,1);
+    line-height:48px;
+    position: absolute;
+  }
+  .desci-word2 {
+    background-color: #FBFEFF;
+    height: 330px;
+    margin-top: 140px;
+    width: 1360px;
+    margin-left: 207px;
+    border: 1px solid;
+  }
+  .desci-word2-logo {
+    margin-top: 74px;
+  }
+  .desci-word2-column {
+    margin-top: 46px;
+  }
+  .desci-word2-column span {
+    width:89px;
+    height:24px;
+    font-size:24px;
+    font-family:Microsoft YaHei UI;
+    font-weight:400;
+    color:rgba(75,83,98,1);
+    line-height:50px;
+  }
+  .desci-menu2-line1 {
+    width: 1px;
+    height: 182px;
+    background-color: #D4DBE9;
+    position: absolute;
+    margin-left: 24%;
+    margin-top: 46px;
+  }
+  .desci-menu2-line2 {
+    width: 1px;
+    height: 182px;
+    background-color: #D4DBE9;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 46px;
+  }
 </style>
