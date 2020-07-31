@@ -5,10 +5,14 @@ import App from './App'
 import router from './router'
 import ant from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
+import axios from 'axios'
+import qs from 'qs'
 
 Vue.use(ant)
 
 Vue.config.productionTip = false
+Vue.prototype.$axios = axios
+Vue.prototype.qs = qs
 
 /* eslint-disable no-new */
 new Vue({
