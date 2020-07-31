@@ -2,28 +2,28 @@
   <div :style="{ background: '#fff', height: '1800px' }">
       <a-row>
       <div class="backgroun-btm">
-        <img src="/static/images/backgroundmid.png" alt="">
+        <img src="static/images/backgroundmid.png" alt="">
       </div>
     </a-row>
       <a-row>
           <a-col :span="24">
               <div class="position-back">
-                  <img src="/static/images/backgroundselect.png" style="width:100%" >
+                  <img src="static/images/backgroundselect.png" style="width:100%" >
               </div>
               <div class="position-back">
                   <span>等保合规，护网重保首选</span>
-                  <img src="/static/images/backgroundtop.png">
+                  <img src="static/images/backgroundtop.png">
               </div>
           </a-col>
       </a-row>
       <a-row>
         <div class="backgroun-mid">
-          <img src="/static/images/backgrounbottom.png" alt="">
+          <img src="static/images/backgrounbottom.png" alt="">
         </div>
       </a-row>
       <a-row>
         <div class="page-bottom">
-          <img src="/static/images/bottom.png" alt="">
+          <img src="static/images/bottom.png" alt="">
         </div>
       </a-row>
       <a-row>
@@ -48,21 +48,21 @@
       <a-row>
           <div class="desci-show">
             <a-col :span="8">
-                  <div class="desci-menu1"><img src="/static/images/menu1.png"> <span>可用性监测</span></div>
+                  <div class="desci-menu1"><img src="static/images/menu1.png"> <span>可用性监测</span></div>
                   <div class="desci-menu1-word1"><span>HTTP监测</span></div>
                   <div class="desci-menu1-word2"><span>DNS监测</span></div>
                   <div class="desci-menu1-word2"><span>PING监测</span></div>
             </a-col>
             <div class="desci-menu1-line"></div>
             <a-col :span="8" >
-                <div class="desci-menu1"><img src="/static/images/menu2.png"> <span>合规性监测</span></div>
+                <div class="desci-menu1"><img src="static/images/menu2.png"> <span>合规性监测</span></div>
                 <div class="desci-menu1-word1"><span>远程网页篡改监测服务</span></div>
                 <div class="desci-menu1-word2"><span>网页敏感信息监测服务</span></div>
                 <div class="desci-menu1-word2"><span>暗链监控</span></div>
             </a-col>
             <div class="desci-menu1-line2"></div>
             <a-col :span="8">
-              <div class="desci-menu1"><img src="/static/images/menu3.png"> <span>安全性监测</span></div>
+              <div class="desci-menu1"><img src="static/images/menu3.png"> <span>安全性监测</span></div>
               <div class="desci-menu1-word1"><span>Web漏洞扫描检测服务</span></div>
               <div class="desci-menu1-word2"><span>钓鱼监测</span></div>
               <div class="desci-menu1-word2"><span>系统漏洞扫描</span></div>
@@ -75,7 +75,7 @@
       <a-row>
           <a-col :span="24">
               <div class="desci-list1">
-                 <img src="/static/images/list1.png">
+                 <img src="static/images/list1.png">
               </div>
               <div class="desci-list1-word">
                  <span>专家级团队参与运营</span>
@@ -85,16 +85,16 @@
       <a-row>
           <div class="desci-word1">
               <a-col :span="8">
-                <div class="desci-word1-logo"><img src="/static/images/word1-1.png" alt=""></div>
+                <div class="desci-word1-logo"><img src="static/images/word1-1.png" alt=""></div>
                 <div class="desci-word1-column"><span>报表定制</span></div>
               </a-col>
               <a-col :span="8">
-                <div class="desci-word1-logo1"><img src="/static/images/word1-2.png" alt=""></div>
+                <div class="desci-word1-logo1"><img src="static/images/word1-2.png" alt=""></div>
                 <div class="desci-word1-column"><span>服务定制</span></div>
               </a-col>
               <div class="desci-menu2-line2"></div>
               <a-col :span="8">
-                <div class="desci-word1-logo"><img src="/static/images/word1-3.png" alt=""></div>
+                <div class="desci-word1-logo"><img src="static/images/word1-3.png" alt=""></div>
                 <div class="desci-word1-column"><span>安全定制</span></div>
               </a-col>
 
@@ -103,7 +103,7 @@
       <a-row>
           <a-col :span="24">
               <div class="desci-list2">
-                <img src="/static/images/list2.png">
+                <img src="static/images/list2.png">
               </div>
               <div class="desci-list2-word">
                 <span>击破网站被攻击被勒索枷锁</span>
@@ -113,17 +113,17 @@
       <a-row>
           <div class="desci-word2">
                <a-col :span="8">
-                  <div class="desci-word2-logo"><img src="/static/images/word2-1.png"></div>
+                  <div class="desci-word2-logo"><img src="static/images/word2-1.png"></div>
                   <div class="desci-word2-column"><span>网页挂马</span></div>
                </a-col>
                <div class="desci-menu2-line1"></div>
                <a-col :span="8">
-                 <div class="desci-word2-logo"><img src="/static/images/word2-2.png"></div>
+                 <div class="desci-word2-logo"><img src="static/images/word2-2.png"></div>
                  <div class="desci-word2-column"><span>敏感信息</span></div>
                </a-col>
                <div class="desci-menu2-line2"></div>
                <a-col :span="8">
-                 <div class="desci-word2-logo"><img src="/static/images/word2-3.png"></div>
+                 <div class="desci-word2-logo"><img src="static/images/word2-3.png"></div>
                  <div class="desci-word2-column"><span>漏洞利用</span></div>
                </a-col>
           </div>

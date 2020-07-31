@@ -5,7 +5,7 @@
 <!--      <div>-->
 <!--        -->
 <!--      </div>-->
-      <img src="/static/images/logonew.png" :style="{float: 'left',marginTop: '7px', marginLeft: '285px'}">
+      <img src="static/images/logonew.png" :style="{float: 'left',marginTop: '7px', marginLeft: '285px'}">
       <a-menu theme="dark" mode="horizontal" @select="chooseTip" :default-selected-keys="[indexNum]" :style="{ lineHeight: '64px', float: 'left', }">
         <a-menu-item key="1" style="margin-left: 110px;">首页</a-menu-item>
         <a-menu-item key="2" style="margin-left: 103px;">试用</a-menu-item>
@@ -76,7 +76,7 @@
   #components-layout-demo-fixed .logo {
     width: 120px;
     height: 31px;
-    background: url(/static/images/logonew.png) -9% no-repeat;
+    /*background: url(static/images/logonew.png) -9% no-repeat;*/
     /*background: rgba(255, 255, 255, 0.2);*/
     margin: 16px 24px 16px 0;
     float: left;
@@ -100,10 +100,6 @@
   .ant-menu-item{
     background-color:#5C69D0
   }
-
-
-</style>
-<style>
   .ant-menu-item ant-ment-item-active ant-menu-item-select {
     background-color: #d05c85
   }
@@ -136,6 +132,5 @@
     font-weight:bold;
   }
 
-
-
 </style>
+

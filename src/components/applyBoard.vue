@@ -3,16 +3,16 @@
     <a-row>
 
         <a-col :span="24">
-            <div class="background"><img src="/static/images/form.png"  style="width:100%"></div>
+            <div class="background"><img src="static/images/form.png"  style="width:100%"></div>
         </a-col>
       <a-col >
-        <div class="background-btm"><img src="/static/images/bottom.png" style="width:100%"></div>
+        <div class="background-btm"><img src="static/images/bottom.png" style="width:100%"></div>
       </a-col>
 
     </a-row>
     <div class="form">
       <div class="tip-word">
-        <img src="/static/images/tip.png">
+        <img src="static/images/tip.png">
         <span>请留下您的联系方式，我们将会提供针对您网站的专业评估和咨询服务，为您的网站提供专业监测和护航服务。</span>
       </div>
       <div class="base">
