@@ -1,10 +1,6 @@
 <template>
   <a-layout id="components-layout-demo-fixed">
     <a-layout-header>
-<!--      <div class="logo" />-->
-<!--      <div>-->
-<!--        -->
-<!--      </div>-->
       <img src="static/images/logonew.png" :style="{float: 'left',marginTop: '7px', marginLeft: '285px'}">
       <a-menu theme="dark" mode="horizontal" @select="chooseTip" :default-selected-keys="[indexNum]" :style="{ lineHeight: '64px', float: 'left', }">
         <a-menu-item key="1" style="margin-left: 110px;">首页</a-menu-item>
@@ -82,7 +78,8 @@
     float: left;
   }
   .ant-layout-header{
-    background:#5C69D0
+    background:#5C69D0;
+    width: 1920px;
   }
 
   .ant-carousel >>> .slick-slide {

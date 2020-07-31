@@ -8,7 +8,7 @@
       <a-row>
           <a-col :span="24">
               <div class="position-back">
-                  <img src="static/images/backgroundselect.png" style="width:100%" >
+                  <img src="static/images/backgroundselect.png" >
               </div>
               <div class="position-back">
                   <span>等保合规，护网重保首选</span>
@@ -55,20 +55,20 @@
             </a-col>
             <div class="desci-menu1-line"></div>
             <a-col :span="8" >
-                <div class="desci-menu1"><img src="static/images/menu2.png"> <span>合规性监测</span></div>
-                <div class="desci-menu1-word1"><span>远程网页篡改监测服务</span></div>
-                <div class="desci-menu1-word2"><span>网页敏感信息监测服务</span></div>
-                <div class="desci-menu1-word2"><span>暗链监控</span></div>
+                <div class="desci-menu2"><img src="static/images/menu2.png"> <span>合规性监测</span></div>
+                <div class="desci-menu1-word1"><span style="margin-left: -80px;">远程网页篡改监测服务</span></div>
+                <div class="desci-menu1-word2"><span style="margin-left: -80px;">网页敏感信息监测服务</span></div>
+                <div class="desci-menu1-word2"><span style="margin-left: -162px;">暗链监控</span></div>
             </a-col>
             <div class="desci-menu1-line2"></div>
             <a-col :span="8">
-              <div class="desci-menu1"><img src="static/images/menu3.png"> <span>安全性监测</span></div>
-              <div class="desci-menu1-word1"><span>Web漏洞扫描检测服务</span></div>
-              <div class="desci-menu1-word2"><span>钓鱼监测</span></div>
-              <div class="desci-menu1-word2"><span>系统漏洞扫描</span></div>
-              <div class="desci-menu1-word2"><span>木马监测</span></div>
-              <div class="desci-menu1-word2"><span>数据库漏洞扫描</span></div>
-              <div class="desci-menu1-word2"><span>弱口令检查</span></div>
+              <div class="desci-menu1"><img src="static/images/menu3.png" style="margin-left: -147px"> <span>安全性监测</span></div>
+              <div class="desci-menu1-word1"><span style="margin-left: -179px">Web漏洞扫描检测服务</span></div>
+              <div class="desci-menu1-word2"><span style="margin-left: -266px">钓鱼监测</span></div>
+              <div class="desci-menu1-word2"><span style="margin-left: -236px">系统漏洞扫描</span></div>
+              <div class="desci-menu1-word2"><span style="margin-left: -258px">木马监测</span></div>
+              <div class="desci-menu1-word2"><span style="margin-left: -215px">数据库漏洞扫描</span></div>
+              <div class="desci-menu1-word2"><span style="margin-left: -242px">弱口令检查</span></div>
             </a-col>
           </div>
       </a-row>
@@ -88,6 +88,7 @@
                 <div class="desci-word1-logo"><img src="static/images/word1-1.png" alt=""></div>
                 <div class="desci-word1-column"><span>报表定制</span></div>
               </a-col>
+              <div class="desci-menu2-line1"></div>
               <a-col :span="8">
                 <div class="desci-word1-logo1"><img src="static/images/word1-2.png" alt=""></div>
                 <div class="desci-word1-column"><span>服务定制</span></div>
@@ -256,10 +257,11 @@
   }
 
   .input-in {
-    margin-left: 30px;
+    margin-left: 110px;
     margin-top: 25px;
     height: 60px;
-    width: 850px;
+    width: 800px;
+    width: 800px;
     border: 1px solid rgba(161,171,197,1);
   }
 
@@ -267,7 +269,7 @@
     margin-top: 26px;
     height: 60px;
     width: 160px;
-    margin-left: 18px;
+    margin-left: 14px;
     background-color: #5C69D0;
 
   }
@@ -279,12 +281,29 @@
     box-shadow:3px 4px 9px 0px rgba(39,47,108,0.25);
     opacity:0.9;
     margin-top: 51px;
-    margin-left: 205px;
+    margin-left: 281px;
   }
 
   .desci-menu1 {
-    /*margin-left: 131px;*/
+    margin-left: 47px;
     margin-top: 56px;
+  }
+  .desci-menu2 {
+    margin-left: -20px;
+    margin-top: 52px;
+  }
+  .desci-menu2 img {
+    margin-top: -9px;
+  }
+  .desci-menu2 span{
+    width:119px;
+    height:25px;
+    font-size:25px;
+    font-family:Microsoft YaHei UI;
+    font-weight:bold;
+    color:rgba(75,83,98,1);
+    line-height:50px;
+    margin-left:8px;
   }
   .desci-menu1 span {
     width:119px;
@@ -303,10 +322,16 @@
 
   .desci-menu1-word1 {
     margin-top: 20px;
+    margin-left: 29px;
+
   }
 
   .desci-menu1-word2 {
     margin-top: 20px;
+    margin-left: 29px;
+  }
+  .desci-menu1-word3 {
+
   }
 
   .desci-menu1-word span{
@@ -338,7 +363,7 @@
 
   .desci-list1 {
     margin-top: 30px;
-    margin-left: 207px;
+    margin-left: 281px;
     position: absolute;
   }
   .desci-list1-word {
@@ -361,8 +386,8 @@
     height: 330px;
     margin-top: 140px;
     width: 1360px;
-    margin-left: 207px;
-    border: 1px solid;
+    margin-left: 281px;
+    /*border: 1px solid;*/
   }
   .desci-word1-logo {
     margin-top: 100px
@@ -387,7 +412,7 @@
 
   .desci-list2 {
     margin-top: 30px;
-    margin-left: 207px;
+    margin-left: 281px;
     position: absolute;
   }
   .desci-list2-word {
@@ -409,8 +434,8 @@
     height: 330px;
     margin-top: 140px;
     width: 1360px;
-    margin-left: 207px;
-    border: 1px solid;
+    margin-left: 281px;
+    /*border: 1px solid;*/
   }
   .desci-word2-logo {
     margin-top: 74px;
