@@ -167,20 +167,23 @@
           }, 14000);
         }
       },
+      // download() {
+      //   const h = this.$createElement;
+      //   this.$info({
+      //     title: '联系我们',
+      //     width: 465,
+      //     content: h('div', {}, [
+      //       h('p', '钱先生'),
+      //       h('p', '电 话:  133-3782-8853'),
+      //       h('p', '邮 箱:  qian.ke@asiainfo-sec.com'),
+      //       h('p', '公 司:  亚信科技有限公司'),
+      //       h('p', '地 址:  南京市雨花区软件大道180号大数据产业园1号楼'),
+      //     ]),
+      //     onOk() {},
+      //   });
+      // }
       download() {
-        const h = this.$createElement;
-        this.$info({
-          title: '联系我们',
-          width: 465,
-          content: h('div', {}, [
-            h('p', '钱先生'),
-            h('p', '电 话:  133-3782-8853'),
-            h('p', '邮 箱:  qian.ke@asiainfo-sec.com'),
-            h('p', '公 司:  亚信科技有限公司'),
-            h('p', '地 址:  南京市雨花区软件大道180号大数据产业园1号楼'),
-          ]),
-          onOk() {},
-        });
+          this.$emit('getIndex','2')
       }
     }
   }

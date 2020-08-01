@@ -1,14 +1,13 @@
 <template>
   <div>
-    <a-row>
+      <a-row>
         <a-col :span="24">
-            <div class="background"><img src="static/images/form.png"></div>
+          <div class="background"><img src="static/images/form.png"></div>
         </a-col>
         <a-col >
           <div class="background-btm"><img src="static/images/bottom.png"></div>
         </a-col>
-
-    </a-row>
+      </a-row>
     <div class="form" v-if="!show">
       <div class="tip-word">
         <img src="static/images/tip.png">
@@ -17,12 +16,10 @@
       <div class="base">
         <span>基础信息</span>
       </div>
-
-
       <a-form-model :model="form" :rules="rules" :ref="form" :style="{marginTop: '70px', marginLeft:'50px'}" :label-col="labelCol" :wrapper-col="wrapperCol">
-        <a-form-model-item required label="网址" prop="url" >
-          <a-input  v-model="form.url" default-value="mysite">
-            <a-select slot="addonBefore" default-value="Http://" style="width: 90px">
+        <a-form-model-item label="网址" prop="url" >
+          <a-input  v-model="form.url" default-value="mysite" suffix=".com" >
+            <a-select slot="addonBefore"  default-value="Http://" style="width: 90px">
               <a-select-option value="Http://">
                 Http://
               </a-select-option>
@@ -30,23 +27,18 @@
                 Https://
               </a-select-option>
             </a-select>
-            <a-select slot="addonAfter" default-value=".com" style="width: 80px">
-              <a-select-option value=".com">
-                .com
-              </a-select-option>
-            </a-select>
           </a-input>
         </a-form-model-item>
-        <a-form-model-item required label="企业" prop="company">
+        <a-form-model-item  label="企业" prop="company">
           <a-input v-model="form.company" />
         </a-form-model-item>
-        <a-form-model-item required  label="姓名" prop="username">
+        <a-form-model-item label="姓名" prop="username">
           <a-input v-model="form.username" />
         </a-form-model-item>
-        <a-form-model-item required  label="手机"  prop="mobilePhone">
+        <a-form-model-item  label="手机"  prop="mobilePhone">
           <a-input v-model="form.mobilePhone" />
         </a-form-model-item>
-        <a-form-model-item required  label="邮箱" prop="email">
+        <a-form-model-item label="邮箱" prop="email">
           <a-input  v-model="form.email"  />
         </a-form-model-item>
         <a-form-model-item>
@@ -150,11 +142,11 @@
               mobilePhone: '',
             },
             rules:{
-              mobilePhone:[{validator:validatorPhone,trigger:"blur"}],
-              username:[{validator:validatorName,trigger:"blur"}],
-              company:[{validator:validatorCompany,trigger:"blur"}],
-              email:[{validator:validatorEmail,trigger:"blur"}],
-              url:[{validator:validatorUrl,trigger:"blur"}],
+              mobilePhone:[{validator:validatorPhone,trigger:"blur"}, {required: true, message: '请输入手机号', trigger: 'blur' }],
+              username:[{validator:validatorName,trigger:"blur"}, {required: true, message: '请输入姓名', trigger: 'blur' }],
+              company:[{validator:validatorCompany,trigger:"blur"}, {required: true, message: '请输入企业名称', trigger: 'blur' }],
+              email:[{validator:validatorEmail,trigger:"blur"}, {required: true, message: '请输入邮箱', trigger: 'blur' }],
+              url:[{validator:validatorUrl,trigger:"blur"}, {required: true, message: '请输入网址', trigger: 'blur' }],
               // validator对应手机格式验证方法（注意必须要有callback）
               // trigger对应触发验证的条件。取值有change(表单值改变时触发)；blur(表单元素失去焦点时触发)
             }
