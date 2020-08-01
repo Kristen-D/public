@@ -2,14 +2,14 @@
   <div>
     <a-row>
         <a-col :span="24">
-            <div class="background"><img src="static/images/form.png"  style="width:100%"></div>
+            <div class="background"><img src="static/images/form.png"></div>
         </a-col>
         <a-col >
-          <div class="background-btm"><img src="static/images/bottom.png" style="width:100%"></div>
+          <div class="background-btm"><img src="static/images/bottom.png"></div>
         </a-col>
 
     </a-row>
-    <div class="form">
+    <div class="form" v-if="!show">
       <div class="tip-word">
         <img src="static/images/tip.png">
         <span>请留下您的联系方式，我们将会提供针对您网站的专业评估和咨询服务，为您的网站提供专业监测和护航服务。</span>
@@ -17,6 +17,7 @@
       <div class="base">
         <span>基础信息</span>
       </div>
+
 
       <a-form-model :model="form" :rules="rules" :ref="form" :style="{marginTop: '70px', marginLeft:'50px'}" :label-col="labelCol" :wrapper-col="wrapperCol">
         <a-form-model-item required label="网址" prop="url" >
@@ -51,12 +52,24 @@
         <a-form-model-item>
           <div style="margin-left: 183px">
               <a-button type="primary" :style="{width: '195px',marginRight: '10px'}" @click="saveInfo">我要咨询</a-button>
-              <a-button style="margin-left: 80px;width: 160px;">我要网站体检报告</a-button>
+              <a-button style="margin-left: 80px;width: 160px;" @click="getReport">我要网站体检报告</a-button>
               <a-button style="margin-left: 100px;">检查次数{{count}}</a-button>
           </div>
         </a-form-model-item>
       </a-form-model>
     </div >
+    <div class="form" style="position: absolute" v-if="show">
+      <a-result :title="tip">
+        <template #icon>
+          <a-icon type="smile" theme="twoTone" />
+        </template>
+        <template #extra>
+          <a-button type="primary" @click="close">
+             关闭
+          </a-button>
+        </template>
+      </a-result>
+    </div>
   </div>
 </template>
 
@@ -127,6 +140,8 @@
             labelCol: { span: 4 },
             wrapperCol: { span: 17 },
             count: '1000',
+            show: false,
+            tip: '提交成功! 我们会在48小时内联系您',
             form: {
               url: '',
               username: '',
@@ -147,21 +162,36 @@
         },
         methods: {
           initCheck(formName) {
-            debugger
             let flag = false;
             this.$refs[formName].validate(valid => {
               if (valid) {
                 flag = true
               }
-                return flag;
             });
+            return flag;
+          },
+          getReport: function() {
+            this.tip ='提交信息后! 我们会在48小时内联系您';
+            this.show = true;
+          },
+          close: function() {
+            let tmp = {
+              url: '',
+                username: '',
+                company: '',
+                email: '',
+                mobilePhone: '',
+            }
+            this.form = tmp;
+            this.show = false;
           },
           saveInfo: function() {
-            debugger
             if (this.initCheck(this.form) ) {
-              this.$axios.post('http://10.1.205.33:20000/safe/save', this.form)
+              this.show = true;
+              this.$axios.post('/safe/save', this.form)
                 .then(function (response) {
                   if (response.data.code === 'Common.Success') {
+                    this.show = true;
                     const h = this.$createElement;
                     this.$info({
                       title: '提交成功',
@@ -181,7 +211,7 @@
         },
         created() {
           let vm = this;
-          this.$axios.get('http://10.1.205.33:20000/safe/count')
+          this.$axios.get('/safe/count')
           .then(function(rs) {
             console.log(rs)
             console.log('这个是成功的数据')
@@ -250,5 +280,8 @@
 
   .ant-form-item-label {
     margin-right: 26px;
+  }
+  .ant-result {
+     margin-top: 150px;
   }
 </style>

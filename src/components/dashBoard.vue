@@ -78,7 +78,7 @@
                  <img src="static/images/list1.png">
               </div>
               <div class="desci-list1-word">
-                 <span>专家级团队参与运营</span>
+                 <span style="margin-left: 84px">专家级团队参与运营</span>
               </div>
           </a-col>
       </a-row>
@@ -107,7 +107,7 @@
                 <img src="static/images/list2.png">
               </div>
               <div class="desci-list2-word">
-                <span>击破网站被攻击被勒索枷锁</span>
+                <span style="margin-left: 95px">击破网站被攻击被勒索枷锁</span>
               </div>
           </a-col>
       </a-row>
@@ -171,6 +171,7 @@
         const h = this.$createElement;
         this.$info({
           title: '联系我们',
+          width: 465,
           content: h('div', {}, [
             h('p', '钱先生'),
             h('p', '电 话:  133-3782-8853'),
@@ -199,6 +200,9 @@
   }
   .checkTip span {
     margin-right: 146px;
+  }
+  .ant-modal-content {
+    width: 465px
   }
 
   .position-back {

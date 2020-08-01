@@ -16,8 +16,16 @@
         <apply></apply>
       </div>
     </a-layout-content>
+    <a-modal v-model="visible" title="联系我们" @ok="handleOk" okText="确定" cancelText="取消">
+      <p>钱先生：</p>
+      <p>电 话:  133-3782-8853</p>
+      <p>邮 箱:  qian.ke@asiainfo-sec.com</p>
+      <p>公 司:  亚信科技有限公司</p>
+      <p>地 址:  南京市雨花区软件大道180号大数据产业园1号楼</p>
+    </a-modal>
 
   </a-layout>
+
 </template>
 <script>
   import dash from "./dashBoard"
@@ -39,20 +47,21 @@
       chooseTip: function(value){
         this.tmpNum = this.indexNum;
         this.indexNum = value.key;
+        // this.visible = true
           if (this.indexNum === '3') {
             this.visible = true;
-            const h = this.$createElement;
-            this.$info({
-              title: '联系我们',
-              content: h('div', {}, [
-                h('p', '钱先生'),
-                h('p', '电 话:  133-3782-8853'),
-                h('p', '邮 箱:  qian.ke@asiainfo-sec.com'),
-                h('p', '公 司:  亚信科技有限公司'),
-                h('p', '地 址:  南京市雨花区软件大道180号大数据产业园1号楼'),
-              ]),
-              onOk() {},
-            });
+            // const h = this.$createElement;
+            // this.$info({
+            //   title: '联系我们',
+            //   content: h('div', {}, [
+            //     h('p', '钱先生'),
+            //     h('p', '电 话:  133-3782-8853'),
+            //     h('p', '邮 箱:  qian.ke@asiainfo-sec.com'),
+            //     h('p', '公 司:  亚信科技有限公司'),
+            //     h('p', '地 址:  南京市雨花区软件大道180号大数据产业园1号楼'),
+            //   ]),
+            //   onOk() {},
+            // });
           this.indexNum = this.tmpNum;
         }
 
@@ -91,6 +100,7 @@
 
   }
 
+
   .ant-carousel >>> .slick-slide h3 {
     color: #fff;
   }
@@ -128,6 +138,10 @@
     font-family:Microsoft YaHei UI;
     font-weight:bold;
   }
+  .ant-modal-content {
+    width: 500px
+  }
+</style>
+<style>
 
 </style>
-
