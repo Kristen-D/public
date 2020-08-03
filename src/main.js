@@ -8,6 +8,7 @@ import 'ant-design-vue/dist/antd.css'
 import axios from 'axios'
 import qs from 'qs'
 
+
 Vue.use(ant)
 
 Vue.config.productionTip = false

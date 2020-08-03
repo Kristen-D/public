@@ -89,7 +89,7 @@
   }
   .ant-layout-header{
     background:#5C69D0;
-    width: 1920px;
+    width: 100%;
   }
 
   .ant-carousel >>> .slick-slide {

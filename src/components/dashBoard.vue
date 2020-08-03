@@ -2,13 +2,13 @@
   <div :style="{ background: '#fff', height: '1800px' }">
       <a-row>
       <div class="backgroun-btm">
-        <img src="static/images/backgroundmid.png" alt="">
+        <img src="static/images/backgroundmid.png" style="width:100%" alt="">
       </div>
     </a-row>
       <a-row>
           <a-col :span="24">
               <div class="position-back">
-                  <img src="static/images/backgroundselect.png" >
+                  <img src="static/images/backgroundselect.png" style="width:100%">
               </div>
               <div class="position-back">
                   <span>等保合规，护网重保首选</span>
@@ -23,7 +23,7 @@
       </a-row>
       <a-row>
         <div class="page-bottom">
-          <img src="static/images/bottom.png" alt="">
+          <img src="static/images/bottom.png" style="width: 100%" alt="">
         </div>
       </a-row>
       <a-row>
@@ -98,7 +98,7 @@
                 <div class="desci-word1-logo"><img src="static/images/word1-3.png" alt=""></div>
                 <div class="desci-word1-column"><span>安全定制</span></div>
               </a-col>
-
+            <div class="desci-menu2-line3"></div>
           </div>
       </a-row>
       <a-row>
@@ -127,6 +127,7 @@
                  <div class="desci-word2-logo"><img src="static/images/word2-3.png"></div>
                  <div class="desci-word2-column"><span>漏洞利用</span></div>
                </a-col>
+               <div class="desci-menu2-line3"></div>
           </div>
       </a-row>
 
@@ -397,7 +398,7 @@
     /*border: 1px solid;*/
   }
   .desci-word1-logo {
-    margin-top: 100px
+    margin-top: 101px
   }
 
   .desci-word1-column {
@@ -468,6 +469,14 @@
     margin-top: 46px;
   }
   .desci-menu2-line2 {
+    width: 1px;
+    height: 182px;
+    background-color: #D4DBE9;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 46px;
+  }
+  .desci-menu2-line3 {
     width: 1px;
     height: 182px;
     background-color: #D4DBE9;

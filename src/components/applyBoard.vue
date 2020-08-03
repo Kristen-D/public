@@ -16,36 +16,36 @@
       <div class="base">
         <span>基础信息</span>
       </div>
-      <a-form-model :model="form" :rules="rules" :ref="form" :style="{marginTop: '70px', marginLeft:'50px'}" :label-col="labelCol" :wrapper-col="wrapperCol">
-        <a-form-model-item label="网址" prop="url" >
-          <a-input  v-model="form.url" default-value="mysite" suffix=".com" >
-            <a-select slot="addonBefore"  default-value="Http://" style="width: 90px">
+      <a-form-model :model="form" :rules="rules" :ref="form" :style="{marginTop: '3%'}" :label-col="labelCol" :wrapper-col="wrapperCol">
+        <a-form-model-item label="网址"  prop="url" class="model-item">
+          <a-input  v-model="form.url" default-value="mysite" style="height: 46px;"  suffix=".com"  >
+            <a-select slot="addonBefore"  default-value="Http://" style="width: 90px; height: 46px">
               <a-select-option value="Http://">
-                Http://
+                http://
               </a-select-option>
               <a-select-option value="Https://">
-                Https://
+                https://
               </a-select-option>
             </a-select>
           </a-input>
         </a-form-model-item>
-        <a-form-model-item  label="企业" prop="company">
-          <a-input v-model="form.company" />
+        <a-form-model-item  label="企业"  prop="company" class="model-item">
+          <a-input v-model="form.company" class="model-item-height" />
         </a-form-model-item>
-        <a-form-model-item label="姓名" prop="username">
-          <a-input v-model="form.username" />
+        <a-form-model-item label="姓名" prop="username" class="model-item">
+          <a-input v-model="form.username" class="model-item-height" />
         </a-form-model-item>
-        <a-form-model-item  label="手机"  prop="mobilePhone">
-          <a-input v-model="form.mobilePhone" />
+        <a-form-model-item  label="手机"  prop="mobilePhone" class="model-item">
+          <a-input v-model="form.mobilePhone" class="model-item-height" />
         </a-form-model-item>
-        <a-form-model-item label="邮箱" prop="email">
-          <a-input  v-model="form.email"  />
+        <a-form-model-item label="邮箱" prop="email" class="model-item">
+          <a-input  v-model="form.email"  class="model-item-height" />
         </a-form-model-item>
-        <a-form-model-item>
-          <div style="margin-left: 183px">
-              <a-button type="primary" :style="{width: '195px',marginRight: '10px'}" @click="saveInfo">我要咨询</a-button>
-              <a-button style="margin-left: 80px;width: 160px;" @click="getReport">我要网站体检报告</a-button>
-              <a-button style="margin-left: 100px;">检查次数{{count}}</a-button>
+        <a-form-model-item class="model-item">
+          <div style="margin-left: 161px">
+              <a-button type="primary" :style="{width: '200px',marginRight: '17px', height: '46px', backgroundColor: '#5C69D0',border: 'node'}" @click="saveInfo">我要咨询</a-button>
+              <a-button :style="{width: '200px',marginRight: '17px', height: '46px'}" @click="getReport">我要网站体检报告</a-button>
+              <a-button :style="{width: '200px',marginRight: '17px', height: '46px'}">检查次数{{count}}</a-button>
           </div>
         </a-form-model-item>
       </a-form-model>
@@ -221,8 +221,27 @@
 </script>
 
 <style scoped>
+  .ant-input {
+    height: 46px;
+  }
+  label.ant-form-item-required {
+    color: red
+  }
+  .ant-input-affix-wrapper .ant-input:not(:last-child) {
+    padding-right: 30px;
+    height: 46px;
+  }
+
+  .model-item {
+    margin-left: -4%;
+
+  }
+  .model-item-height {
+    height: 46px;
+  }
   .base {
-    margin-top: 57px;
+    margin-top: 2%;
+    margin-left: -1%;
   }
   .base span {
     width:119px;
@@ -253,6 +272,8 @@
   }
   .tip-word {
     padding-top: 41px;
+    text-align: initial;
+    margin-left: 10%;
   }
 
   .tip-word span {
@@ -275,5 +296,45 @@
   }
   .ant-result {
      margin-top: 150px;
+  }
+
+
+
+</style>
+<style>
+  label.ant-form-item-required {
+    width:35px;height:16px;font-size:16px;font-family:Microsoft YaHei UI;font-weight:400;color:rgba(75,83,98,1);line-height:50px;
+  }
+  .ant-select-selection--single .ant-select-selection__rendered {
+    margin-top: 6px;
+    width: 59px;
+    height: 17px;
+    font-size: 16px;
+    font-family: Microsoft YaHei UI;
+    font-weight: 400;
+    color: rgba(51,51,51,1);
+  }
+  .ant-select-arrow {
+    margin-top: 1px;
+  }
+  .ant-input-group > .ant-input-affix-wrapper:not(:first-child) .ant-input {
+    height: 45px;
+  }
+  .ant-input-suffix {
+    height: 17px;
+    font-size: 16px;
+    font-family: Microsoft YaHei UI;
+    font-weight: 400;
+    color: rgba(51,51,51,1);
+  }
+  .ant-form-item-label {
+    margin-right: 1%;
+  }
+  .ant-btn ant-btn-primary {
+    width: 200px;
+    margin-right: 17px;
+    height: 46px;
+    background-color: #5C69D0;
+    border: none;
   }
 </style>
